@@ -1,40 +1,37 @@
-import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from '../assets/CatShop_Logo.svg'
-import hamburger from '../assets/icons/Icon_Hamburger_28x21.svg'
-import './NavBar.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from '../assets/CatShop_Logo.svg';
 
 function NavBar() {
-    const [menuOpen, setMenuOpen] = useState(false)
-
     return (
-        <>
-        <nav className='navbar'>
-            <NavLink to="/">
-                <img src={logo} alt="Cat Shop Logo" height="25"></img>
-            </NavLink>
-
-            <div className='nav-links'>
-                <NavLink to="/cats">Cats</NavLink>
-                <NavLink to="/about-us">About us</NavLink>
-                <NavLink to="/shopping-cart">Shopping cart</NavLink>
-            </div>
-
-            <button className='hamburger' onClick={() =>
-                setMenuOpen(!menuOpen)}>
-                <img src={hamburger} alt="Menu" />
-            </button>
-        </nav>
-
-        {menuOpen &&  (
-            <div className='mobile-menu'>
-            <NavLink to='/cats' onClick={() => setMenuOpen(false)}>Cats</NavLink>
-            <NavLink to='/about-us' onClick={() => setMenuOpen(false)}>About us</NavLink>
-            <NavLink to='/shopping-cart' onClick={() => setMenuOpen(false)}>Shopping cart</NavLink>
-            </div>
-        )}
-        </>
-    )
+        <Navbar expand="lg" className="bg-body-tertiary">
+            <Container>
+                <Navbar className="bg-body-tertiary">
+                    <Container>
+                        <Navbar.Brand href="/">
+                            <img
+                                alt="Cat Shop Logo"
+                                src={logo}
+                                height="25"
+                                className="d-inline-block align-top"
+                            />
+                        </Navbar.Brand>
+                    </Container>
+                </Navbar>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link as={NavLink} to="/cats">Cats</Nav.Link>
+                        <Nav.Link as={NavLink} to="/about-us">About us</Nav.Link>
+                        <Nav.Link as={NavLink} to="/shopping-cart">Shopping cart</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
 }
 
-export default NavBar
+export default NavBar;
