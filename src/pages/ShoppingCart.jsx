@@ -1,7 +1,7 @@
 function ShoppingCart() {
     return (
-        <div>
-            <h1>Shopping cart</h1>
+        <div className='container text-left mt-5'>
+            <h1 className='display-3'>Shopping cart</h1>
         </div>
     )
 }

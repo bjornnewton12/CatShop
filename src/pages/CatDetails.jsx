@@ -1,7 +1,7 @@
 function CatDetails() {
     return (
-        <div>
-            <h1>Cat Details</h1>
+        <div className='container text-left mt-5'>
+            <h1 className='display-3'>Cat Details</h1>
         </div>
     )
 }

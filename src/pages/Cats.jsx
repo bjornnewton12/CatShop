@@ -1,7 +1,7 @@
 function Cats() {
     return (
-        <div>
-            <h1>Cats</h1>
+        <div className='container text-left mt-5'>
+            <h1 className='display-3'>Cats</h1>
         </div>
     )
 }
