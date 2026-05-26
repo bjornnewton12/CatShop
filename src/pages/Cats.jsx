@@ -23,7 +23,7 @@ function Cats() {
     <div className="container text-left mt-5">
       <h1 className="display-3">Cats</h1>
       <Row>
-        {cats.slice(start, end).map((cat) => (
+        {cats.filter(cat => cat.reference_image_id).slice(start, end).map((cat) => (
           <Col key={cat.id} xs={3}>
             <CatCard cat={cat} />
           </Col>
