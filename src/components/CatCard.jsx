@@ -4,7 +4,7 @@ import catPlaceholder from '../assets/cat_placeholder.jpg';
 
 function CatCard( {cat}) {
   return (
-    <Card style={{ width: '12rem' }}>
+    <Card>
       <Card.Img variant="top" style={{ objectFit: 'cover', aspectRatio: '4/3' }} src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`} onError={(e) => e.target.src = catPlaceholder} alt={cat.name} />
       <Card.Body>
         <Card.Title>{cat.name}</Card.Title>

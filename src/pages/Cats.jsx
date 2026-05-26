@@ -24,7 +24,7 @@ function Cats() {
       <h1 className="display-3">Cats</h1>
       <Row>
         {cats.filter(cat => cat.reference_image_id).slice(start, end).map((cat) => (
-          <Col key={cat.id} xs={3}>
+          <Col key={cat.id} xs={12} sm={6} md={4} lg={3}>
             <CatCard cat={cat} />
           </Col>
         ))}
