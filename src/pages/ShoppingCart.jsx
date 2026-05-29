@@ -1,7 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useCart } from "../context/CartContext"
 
-function ShoppingCart({ cartItems }) {
+function ShoppingCart() {
+  const { cartItems } = useCart()
   return (
 
     <div className="container text-left mt-5">

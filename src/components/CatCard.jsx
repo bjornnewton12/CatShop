@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 import catPlaceholder from "../assets/cat_placeholder.jpg";
 
-function CatCard({ cat, addToCart, removeFromCart, cartItems }) {
-  const inCart = cartItems.some(item => item.id === cat.id)
+function CatCard({ cat }) {
   return (
     <Card>
       <Card.Img
@@ -16,12 +16,9 @@ function CatCard({ cat, addToCart, removeFromCart, cartItems }) {
       <Card.Body>
         <Card.Title>{cat.name}</Card.Title>
         <Card.Text>{cat.origin}</Card.Text>
-        <Button
-          variant={inCart ? "danger" : "primary"}
-          onClick={() => inCart ? removeFromCart(cat) : addToCart(cat)}
-        >
-          {inCart ? "Remove from cart" : "Add to cart"}
-        </Button>
+        <Link to={`/cats/${cat.id}`}>
+          <Button variant="primary">Learn more</Button>
+        </Link>
       </Card.Body>
     </Card>
   );

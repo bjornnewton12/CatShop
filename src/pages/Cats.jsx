@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CatCard from "../components/CatCard";
 
-function Cats( { addToCart, removeFromCart, cartItems }) {
+function Cats() {
   const [cats, setCats] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const start = (currentPage - 1) * 10;
@@ -25,7 +25,7 @@ function Cats( { addToCart, removeFromCart, cartItems }) {
       <Row className="g-4">
         {cats.filter(cat => cat.reference_image_id).slice(start, end).map((cat) => (
           <Col key={cat.id} xs={12} sm={6} md={4} lg={3}>
-            <CatCard cat={cat} addToCart={addToCart} removeFromCart={removeFromCart} cartItems={cartItems} />
+            <CatCard cat={cat}/>
           </Col>
         ))}
       </Row>
