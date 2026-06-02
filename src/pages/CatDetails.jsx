@@ -27,7 +27,7 @@ function CatDetails() {
       <Row>
         <Col md={6}>
           <img
-            style={{ width: "100%", }}
+            style={{ width: "100%" }}
             src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
             onError={(e) => (e.target.src = catPlaceholder)}
             alt={cat.name}
@@ -38,7 +38,8 @@ function CatDetails() {
           <p>{cat.origin}</p>
           <Button
             variant={inCart ? "danger" : "primary"}
-            onClick={() => (inCart ? removeFromCart(cat) : addToCart(cat))} >
+            onClick={() => (inCart ? removeFromCart(cat) : addToCart(cat))}
+          >
             {inCart ? "Remove from cart" : "Add to cart"}
           </Button>
         </Col>

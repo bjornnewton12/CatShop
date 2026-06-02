@@ -14,7 +14,7 @@ function AboutUs() {
                 <h2 className="display-6">Contact us</h2>
                 <p className="lead">If you need to get in touch with us there a few ways of doing so:</p>
                 <p className="lead"><strong>Email:</strong> info@catshop.com</p>
-                <p className="lead"><strong>Phone:</strong> +46213421421</p>
+                <p className="lead"><strong>Phone:</strong> +4611111111</p>
                 <p className="lead"><strong>Address:</strong> 21 Cat Street, Universe</p>
             </div>
         </div>
