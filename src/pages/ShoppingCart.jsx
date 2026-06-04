@@ -16,15 +16,13 @@ function ShoppingCart() {
   return (
     <div className="container text-left mt-5">
       <h1 className="display-3 mb-4">Shopping cart</h1>
-      {cartItems.map((cat, index) => (
-        <div key={index}>
-          <Row className="g-4 mb-4">
-            <Col xs={12} sm={6} md={4} lg={3}>
-              <CatCard cat={cat} />
-            </Col>
-          </Row>
-        </div>
-      ))}
+      <Row className="g-4 mb-4">
+        {cartItems.map((cat, index) => (
+          <Col xs={12} sm={6} md={4} lg={3}>
+            <CatCard cat={cat} />
+          </Col>
+        ))}
+      </Row>
 
       <Button variant="primary" onClick={handleShow}>
         Proceed to checkout
