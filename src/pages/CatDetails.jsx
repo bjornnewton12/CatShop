@@ -36,6 +36,7 @@ function CatDetails() {
         <Col md={6}>
           <h2>{cat.name}</h2>
           <p>{cat.origin}</p>
+          <p>{cat.description}</p>
           <Button
             variant={inCart ? "danger" : "primary"}
             onClick={() => (inCart ? removeFromCart(cat) : addToCart(cat))}

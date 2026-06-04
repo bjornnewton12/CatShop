@@ -1,27 +1,32 @@
-# DEL B: INLÄMNINGSUPPGIFT — KATTBUTIK
+# Cat Shop
 
-## Bakgrundsbeskrivning
-Cat Shop är en kattbutik i ReactJS som asynkront 
-hämtar och presenterar data från WebApi. Applikationen är byggd med React-komponenter. Applikationen ska ha ett modernt användargränssnitt som dynamiskt anpassar hur en sida renderas beroende på skärmstorlek, en responsiv applikation. React, react-router-dom och react-bootstrapa används.
+## Projektbeskrivning
+Cat Shop är en kattbutik i React som hämtar och presenterar data från "The Cat API" (https://api.thecatapi.com/v1/breeds?limit=30). Applikationen är byggd med React-komponenter. Cat Shop är responsiv, och anpassar sig efter skärmstorlek med react-bootstrap. React, react-router-dom och react-bootstrap används.
 All kod är skriven i ReactJS och JSX. Applikationen är uppbyggd med react-komponenter.
 
-## Hur man startar projektet
-För att starta applikationen skriver man npm install följt av npm run dev i terminalen.
+## Teknik
+- React med JSX
+- React Router DOM för sidnavigering
+- React Bootstrap för responsiv layout
+- Context API för kundvagnshantering
+- Vite som byggverktyg
 
-## I projektet finns
-1. Navbar.jsx
-    - Meny för att navigera mellan sidorna
-    - Home.jsx
-2. Startsida med presentation
-3. AboutUs.jsx
+## Hur man startar projektet
+1. npm install
+2. npm run dev
+3. Öppnas på http://localhost:5173.
+
+## Sidor i projektet
+1. Home
+    - Startsida med presentation
+2. AboutUs
     - Sida med information om ägare med kontaktinformation. 
-4. Cats.jsx
+3. Cats
     - Kattsida som listar katter hämtade från WebAPI:et med React-komponenter. Listan är indelad i listsidor (pagination) där varje listsida visar 10 katter. Varje rad i listan visar kattens namn, ursprungsland och bild. 
     - Pagination
     - Sökfält 
-5. CatDetails.jsx
+4. CatDetails
     - Detaljsida som innehåller en knapp för att lägga till katten i en kundvagn.
-6. ShoppingCart.jsx
-    - Kundvagnen  hanteras med Context API så att antalet visas i menyn och uppdateras direkt i hela applikationen.
-    - innehåller en knapp som öppnar upp en modal där ett formulär dyker upp för användaren så att de kan fylla i namn, e-postadress och leveransadress. Det finns en knapp för att skicka ordern som stänger modalen och skapar en alert som orderbekräftelse. 
-7. Applikationen är responsiv, och anpassar sig efter  skrämstorlek med react-bootstrap.
+5. ShoppingCart
+    - Kundvagnen hanteras med Context API så att antalet visas i menyn och uppdateras direkt i hela applikationen.
+    - Innehåller en knapp som öppnar upp en modal där ett formulär dyker upp för användaren så att de kan fylla i namn, e-postadress och leveransadress. Det finns en knapp för att skicka ordern som stänger modalen och skapar en alert som orderbekräftelse.
