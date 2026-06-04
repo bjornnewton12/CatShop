@@ -24,9 +24,13 @@ function ShoppingCart() {
         ))}
       </Row>
 
-      <Button variant="primary" onClick={handleShow}>
-        Proceed to checkout
-      </Button>
+      {cartItems.length > 0 ? (
+        <Button variant="primary" onClick={handleShow}>
+          Proceed to checkout
+        </Button>
+      ) : (
+        <p>There are no cats in the shopping cart</p>
+      )}
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
